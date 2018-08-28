@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+
+<body>
+
+
+<script>
+let length = prompt ("Må jeg få længden?"),
+    width = prompt ("Må jeg få bredden?"),
+    besked;
+
+    if (Number(width) && Number (length)){
+        alert("Længde: " + length + "meter \nBredden:" +
+             width + "\meter \nArealet:" +
+             length*width + "Kvadratmeter");
+
+
+    }
+
+    else{
+        alert("Kan ikke regne det ud");
+
+
+    }
+
+    if(confirm("Vil du starte forfra?")){
+        location.reload();
+    }
+
+</script>
+
+
+</body>
+</html>
