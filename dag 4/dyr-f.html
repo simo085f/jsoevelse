@@ -66,9 +66,9 @@
             temp=document.querySelector(".dyretemplate");
             dyr.forEach(animal =>{
                 let klon=temp.cloneNode(true).content;
-                klon.querySelector("h2")
-                klon.querySelector("ul .type-data")
-                klon.querySelector("ul .levested-data")
+                klon.querySelector("h2").textContent=animal.navn;
+                klon.querySelector("ul .type-data").textContent=animal.type;
+                klon.querySelector("ul .levested-data").textContent=animal.levested;
                 klon.querySelector("img").src=animal.billede;
                 dest.appendChild(klon);
                  
