@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <div class="dyr">
+        <template class="dyretemplate">
+        <div class="dyr">
+            <h2></h2>
+            <ul>
+                <li class="type-data"></li>
+                <li class="levested-data"></li>
+            </ul>
+            <img src="" alt="">
+            </div>
+        </template>
+
+    </div>
+    <style>
+        img {
+            width: 150px;
+        }
+    </style>
+    <script>
+        let dyr = [{
+                "navn": "elefant",
+                "type": "pattedyr",
+                "levested": "Indien",
+                "billede": "elefant.png"
+            },
+            {
+                "navn": "flodhest",
+                "type": "pattedyr",
+                "levested": "Afrika",
+                "billede": "hippo.jpg"
+            },
+
+            {
+                "navn": "giraf",
+                "type": "pattedyr",
+                "levested": "Sydafrika",
+                "billede": "giraf.jpg"
+            }
+
+
+        ];
+
+        // let tekst = "En " + dyr.navn + " er et " + dyr.type + ", som lever i " + dyr.levested;
+        //console.log(tekst);
+
+        //document.querySelector(".om").textContent="En "+dyr.navn+" er et "+dyr.type+" , som lever i "+dyr.levested;
+        document.addEventListener("DOMContentLoaded", begynd);
+
+        function begynd() {
+            //document.querySelector(".elefant").textContent = dyr.navn + ": ";
+            //document.querySelector(".om").textContent = " er et " + dyr.type + //", som lever i " + dyr.levested;
+            //document.querySelector(".dyr img").src=dyr.billede};
+
+           // dyr.forEach(animal => {
+               // document.querySelector(".dyr").innerHTML += "<img src='" + animal.billede + "'alt=''>" + animal.navn + ": " + animal.type + " fra " + animal.levested + "<br>"
+            dest=document.querySelector(".dyr");
+            temp=document.querySelector(".dyretemplate");
+            dyr.forEach(animal =>{
+                let klon=temp.cloneNode(true).content;
+                klon.querySelector("h2")
+                klon.querySelector("ul .type-data")
+                klon.querySelector("ul .levested-data")
+                klon.querySelector("img").src=animal.billede;
+                dest.appendChild(klon);
+                 
+            })
+        
+        }
+        
+    </script>
+</body>
+</html>
